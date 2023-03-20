@@ -9,3 +9,37 @@ eagerLoadControllersFrom("controllers", application)
 // Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
+
+
+let seconds = 0;
+let tens = 0;
+let appendTens = document.getElementById("tens")
+let appendSeconds = document.getElementById("seconds")
+
+function startTimer () {
+  tens++;
+  if(tens <= 9){
+    appendTens.innerHTML = "0" + tens;
+  }
+
+  if (tens > 9){
+    appendTens.innerHTML = tens;
+
+  }
+
+  if (tens > 99) {
+    seconds++;
+    appendSeconds.innerHTML = "0" + seconds;
+    tens = 0;
+    appendTens.innerHTML = "0" + 0;
+  }
+
+  if (seconds > 9){
+    appendSeconds.innerHTML = seconds;
+  }
+
+}
+
+window.setInterval(function(){
+  startTimer()
+}, 10);
