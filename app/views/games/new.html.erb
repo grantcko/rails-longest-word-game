@@ -1,22 +1,28 @@
-<div class="container d-flex p-3 justify-content-evenly">
-  <div class="card p-3" style="width: 36rem;">
-    <h1 class="text-center">NEW GAME</h1>
-    <ul class="inline m-0 p-0 text-center">
-      <% @letters.each do |letter| %>
-        <li class="list-inline-item m-0 p-1"><strong><%= letter %></strong></li>
-      <% end %>
-    </ul>
-    <div>
-      <p class="text-center">You have to enter the longest english word you can find using only letters above</p>
-    </div>
-  </div>
+<div class="">
+  <button onClick="window.location.reload();" class="btn-custom mt-4">
+    <h1 class="title-blue mx-4 top-title">NEW GAME</h1>
+    <i class="fa-solid fa-rotate-right mt-3 icon-small"></i>
+  </button>
 </div>
-<div class="m-3 text-center">
-  <form action="/score" method="get" data-turbo="false">
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <%= hidden_field_tag :generated_letters, @letters %>
-    <%= hidden_field_tag :start_time, Time.now %>
-    <input type="text" name="word" placeholder="sabbath">
-    <input type="submit">
-  </form>
+<div class="position-absolute top-50 start-50 translate-middle">
+  <div class="p-3 text-center container-small" style="width: 36rem;">
+    <p class="text-red"><span id="seconds">00</span>:<span id="tens"></span> seconds</p>
+    <p class="instructions">Enter the longest possibly word using only these 10 letters</p>
+    <div class="d-flex justify-content-center">
+      <ul class="inline my-0 mx-3 p-0">
+        <% @letters.each do |letter| %>
+          <li class="list-inline-item m-0 p-1"><%= letter %></li>
+        <% end %>
+      </ul>
+      <button onClick="window.location.reload();" class="btn-custom-two mt-1">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+    </div>
+    <form action="/score" method="get" data-turbo="false" class="text-center form-small">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :generated_letters, @letters %>
+      <%= hidden_field_tag :start_time, Time.now %>
+      <input type="text" name="word" placeholder="press submit to enter" class="form-control">
+    </form>
+  </div>
 </div>
