@@ -20,9 +20,6 @@ def lookup_word(word)
   JSON.parse(url_serialized)
 end
 
-
-
-
 def calc_score
   @time_taken = calc_time
   @time_points = @time_taken.fdiv(10)
@@ -50,8 +47,6 @@ def calc_score
   end
   0
 end
-
-
 
 def calc_time
   Time.now - Time.parse(params['start_time'])
