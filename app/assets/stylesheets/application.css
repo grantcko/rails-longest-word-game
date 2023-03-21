@@ -89,6 +89,19 @@ p {
   border-style: solid;
 }
 
+.btn-custom-three {
+  background-color: #ff000000;
+	color: rgb(255, 0, 0);
+	border: none;
+	font-size: .7rem;
+	font-weight: bold;
+  transition: .1s;
+}
+
+.btn-custom-three:hover {
+  font-size: .9rem;
+}
+
 @media (max-width: 800px) {
   /* html, body {
     width: 100%;
