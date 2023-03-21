@@ -1,11 +1,11 @@
 <div class="">
   <button onClick="window.location.reload();" class="btn-custom mt-4">
-    <h1 class="title-blue mx-4 top-title">NEW GAME</h1>
+    <h1 class="title-blue mx-4 top-title">LONGEST WORD</h1>
     <i class="fa-solid fa-rotate-right mt-3 icon-small"></i>
   </button>
 </div>
-<div class="position-absolute top-50 start-50 translate-middle">
-  <div class="p-3 text-center container-small" style="width: 36rem;">
+<div class="position-absolute top-50 start-50 translate-middle container-small text-center py-4">
+  <div class="" style="">
     <p class="text-red"><span id="seconds">00</span>:<span id="tens"></span> seconds</p>
     <p class="instructions">Enter the longest possibly word using only these 10 letters</p>
     <div class="d-flex justify-content-center">
@@ -22,7 +22,7 @@
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
       <%= hidden_field_tag :generated_letters, @letters %>
       <%= hidden_field_tag :start_time, Time.now %>
-      <input type="text" name="word" placeholder="press submit to enter" class="form-control">
+      <input type="text" name="word" placeholder="press submit to enter" class="form-trans">
     </form>
   </div>
 </div>

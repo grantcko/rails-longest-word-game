@@ -25,7 +25,7 @@ def calc_score
   @time_points = @time_taken.fdiv(10)
   @message = ''
   length_score = 0
-  guess_word = params['word']
+  guess_word = params['word'].downcase
   checked_word = lookup_word(guess_word)
   guess_letters = guess_word.split('')
   generated_letters = params['generated_letters'].split(' ')
