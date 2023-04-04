@@ -1,6 +1,6 @@
 # Longest Word
 
-Welcome to Longest Word, a Ruby on Rails website where the objective is to enter the longest possible word using 10 randomly generated letters, in the shortest amount of time.
+Welcome to [Longest Word](https://longest-word.herokuapp.com/), a Ruby on Rails website where the objective is to enter the longest possible word using 10 randomly generated letters, in the shortest amount of time.
 
 ## Gameplay
 
