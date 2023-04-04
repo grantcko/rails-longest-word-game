@@ -1,6 +1,6 @@
 # Longest Word
 
-Welcome to Longest Word, a game where the objective is to enter the longest possible word using 10 randomly generated letters, in the shortest amount of time.
+Welcome to Longest Word, a Ruby on Rails website where the objective is to enter the longest possible word using 10 randomly generated letters, in the shortest amount of time.
 
 ## Gameplay
 
@@ -12,17 +12,21 @@ Welcome to Longest Word, a game where the objective is to enter the longest poss
 
 ## Installation
 
-Clone the repository to your local machine:
+To install Longest Word on your local machine, clone the repository:
 
-`git clone https://github.com/yourusername/longest-word.git`
+`git clone git@github.com:grantcko/rails-longest-word-game.git`
+
+Then, navigate to the cloned repository and install the necessary dependencies by running:
+
+`bundle install`
 
 ## Usage
 
-To start the game, run the following command:
+To start the server, run:
 
-`python longest_word.py`
+`rails server`
 
-Enter your word using the 10 letters provided and press Enter. The game will validate your word and display your score.
+Then, navigate to `localhost:3000` in your web browser to access the Longest Word website.
 
 ## Contributing
 
