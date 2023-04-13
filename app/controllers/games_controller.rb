@@ -15,7 +15,7 @@ end
 private
 
 def lookup_word(word)
-  url = "https://wagon-dictionary.herokuapp.com/#{word}"
+  url = "https://wagon-dictionary.herokuapp.com/#{word.strip}"
   url_serialized = URI.open(url).read
   JSON.parse(url_serialized)
 end
@@ -25,7 +25,7 @@ def calc_score
   @time_points = @time_taken.fdiv(10)
   @message = ''
   length_score = 0
-  guess_word = params['word'].downcase
+  guess_word = params['word'].downcase.strip
   checked_word = lookup_word(guess_word)
   guess_letters = guess_word.split('')
   generated_letters = params['generated_letters'].split(' ')
